@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  prod:
+    build: .
+    image: react-and-spring
+    container_name: react-and-spring
+    ports:
+      - "8080:8080"
+    networks:
+      - react-and-spring-net
+networks:
+  react-and-spring-net:
+    name: react-and-spring-net
+    driver: bridge
