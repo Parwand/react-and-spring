@@ -11,9 +11,9 @@ function App() {
     getMessage();
   });
 
-  const getMessage = async() => {
+  const getMessage = async () => {
     const response =  await axios.get("http://localhost:8080/api/hello");
-    setMessage(response)
+    setMessage(response.data)
   }
 
   return (
